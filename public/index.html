@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share a secret note</title>
+</head>
+<body>
+    <header class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-md-8 mx-auto my-5">
+                    <h1 class="display-5 text-center text-white">Secret Note Sharer</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto col-11 col-xs-8 col-md-10 col-lg-8">
+                    <form id="create-secret" class="p-4">
+                        <div class="form-group">
+                            <label for="secret-note">Your Secret Note:</label>
+                            <textarea class="form-control" name="secrt" placeholder="Secret Content..." id="secret-note" rows="6"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="ttl">Expires In:</label>
+                            <select class="form-control" name="ttl" id="ttl">
+                                <optgroup label="Minutes">
+                                    <option value="300">5 Minutes</option>
+                                    <option value="900">15 Minutes</option>
+                                    <option value="1800">30 Minutes</option>
+                                </optgroup>
+                                <optgroup label="Hours">
+                                    <option value="3600">1 Hour</option>
+                                    <option value="21600">6 Hours</option>
+                                    <option value="43200">12 Hours</option>
+                                </optgroup>
+                                <optgroup label="Days">
+                                    <option value="86400">1 Day</option>
+                                    <option value="604800">7 Days</option>
+                            </select>
+                            </optgroup>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="password-switch">
+                                <label class="custom-control-label" for="password-switch">
+                                    Set a password (Optional)
+                                    <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="If activated, you will be able to provide a password that will be used to decrypt the secret message."></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-password">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="A word or phrase that's hard to guess">
+                        </div>
+                        <div class="form-group d-flex">
+                            <button type="submit" class="btn btn-primary ml-auto">SHARE YOUR SECRET!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto col-11 col-xs-8 col-md-10 col-lg-8 my-3">
+                    <p class="text-white text-right small">Pulse8 - Secret note sharer.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
